@@ -39,6 +39,20 @@ nav {
     justify-content: space-between;
     align-items: center;
   }
+
+  &.open {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 6rem;
+    height: 100vh;
+    width: 90vw;
+
+    .nav-menu-link {
+      font-size: 5.7rem;
+    }
+  }
 }
 
 .nav-menu-item {
@@ -50,6 +64,7 @@ nav {
   display: inline-block;
   text-decoration: none;
   color: $color-white-primary;
+  font-family: $font-serif;
   padding: 2rem;
   transition: all 0.3s ease;
 
@@ -68,5 +83,57 @@ nav {
 
   &:hover::after {
     width: calc(100% + 1rem);
+  }
+}
+
+.nav-toggle-btn {
+  padding: 3rem 0 0;
+  cursor: pointer;
+
+  @media screen and (min-width: $screen-size-lg) {
+    display: none;
+  }
+
+  &:hover {
+    div:first-of-type,
+    div:nth-of-type(2n) {
+      width: 30px;
+    }
+  }
+
+  div {
+    background-color: #fff;
+    height: 3px;
+    margin-bottom: 6px;
+    transition: all 0.3s linear;
+
+    &:first-of-type {
+      width: 25px;
+    }
+
+    &:nth-of-type(2n) {
+      width: 17px;
+    }
+
+    &:last-of-type {
+      width: 30px;
+    }
+  }
+
+  &.open {
+    div:first-of-type {
+      transform: rotate3d(0, 0, 1, 45deg) translate(4px, -1px);
+      width: 20px;
+    }
+
+    div:nth-of-type(2n) {
+      transform: translateX(-11px);
+      width: 30px;
+    }
+
+    div:last-of-type {
+      transform: rotate3d(0, 0, 1, -45deg) translate(4px, 1px);
+      width: 20px;
+    }
   }
 }
