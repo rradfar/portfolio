@@ -1,0 +1,56 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: $screen-size-lg) {
+    flex-direction: row;
+  }
+}
+
+.hero-copy {
+  order: 2;
+  padding: $padding-screen-sm;
+
+  @media screen and (min-width: $screen-size-lg) {
+    order: 1;
+  }
+
+  h1 {
+    font-family: $font-serif;
+    font-weight: $font-weight-bold;
+    font-size: 5rem;
+    line-height: 5rem;
+    letter-spacing: 0.1rem;
+
+    span {
+      display: block;
+    }
+  }
+
+  p {
+    font-family: $font-sans-serif;
+    font-weight: $font-weight-normal;
+    font-size: 2rem;
+    line-height: 2.6rem;
+    margin-top: 3.2rem;
+  }
+}
+
+.hero-image {
+  order: 1;
+  max-width: 100vh;
+  max-height: calc(100vh - 6rem);
+  padding: $padding-screen-sm;
+  overflow: hidden;
+
+  @media screen and (min-width: $screen-size-lg) {
+    order: 2;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
