@@ -8,5 +8,8 @@
     "sass": "node-sass -w scss -o css --output-style compressed"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
 }
