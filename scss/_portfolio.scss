@@ -6,6 +6,13 @@
 .portfolio-header {
   text-align: center;
   margin: 3rem auto;
+
+  h2 {
+    font-family: $font-sans-serif;
+    font-weight: $font-weight-bold;
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+  }
 }
 
 .portfolio {
@@ -14,7 +21,7 @@
   justify-content: space-between;
   align-items: center;
 
-  @media screen and (min-width: $screen-size-lg) {
+  @media screen and (min-width: 992px) {
     flex-flow: row nowrap;
   }
 }
@@ -23,7 +30,7 @@
   flex-basis: 100%;
   margin: 3rem auto;
 
-  @media screen and (min-width: $screen-size-lg) {
+  @media screen and (min-width: 992px) {
     flex-basis: 30%;
   }
 }
@@ -35,6 +42,8 @@
 
 .portfolio-image {
   img {
+    border: 1px solid #000;
+    border-radius: 10px;
     display: block;
     width: 100%;
     height: auto;
@@ -51,7 +60,7 @@
   a {
     position: relative;
     display: inline-block;
-    color: $color-white-primary;
+    color: $color-black-primary;
     font-size: 1.6rem;
     line-height: 2.2rem;
     font-weight: $font-weight-bold;
@@ -62,7 +71,7 @@
       content: "";
       width: 3rem;
       height: 3rem;
-      border: 0.2rem solid $color-white-primary;
+      border: 0.2rem solid $color-black-primary;
       background: 0 0;
       border-radius: 90%;
       top: -0.8rem;
@@ -73,7 +82,7 @@
     span {
       transition: 0.3s;
       display: inline-block;
-      margin-left: 5rem;
+      margin-left: 4rem;
     }
 
     &:hover {

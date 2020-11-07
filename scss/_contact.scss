@@ -6,6 +6,13 @@
 .contact-header {
   text-align: center;
   margin: 3rem auto;
+
+  h2 {
+    font-family: $font-sans-serif;
+    font-weight: $font-weight-bold;
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+  }
 }
 
 .contact-cta {
@@ -14,7 +21,7 @@
   a {
     position: relative;
     display: inline-block;
-    color: $color-white-primary;
+    color: $color-black-primary;
     font-size: 1.6rem;
     line-height: 2.2rem;
     font-weight: $font-weight-bold;
@@ -25,7 +32,7 @@
       content: "";
       width: 3rem;
       height: 3rem;
-      border: 0.2rem solid $color-white-primary;
+      border: 0.2rem solid $color-black-primary;
       background: 0 0;
       border-radius: 90%;
       top: -0.8rem;
@@ -41,10 +48,10 @@
 
     &:hover {
       &::before {
-        width: calc(100% + 3rem);
+        width: calc(100% + 4rem);
         height: 5.2rem;
         border-radius: 5rem;
-        top: -1.8rem;
+        top: -1.6rem;
         border-color: $color-brand-primary;
       }
     }
@@ -53,14 +60,15 @@
 
 .contact-socials {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   line-height: 100%;
   margin-top: 6rem;
 
-  &::before {
+  &::before,
+  &::after {
     content: "";
-    background-color: rgba($color-white-primary, 0.9);
+    background-color: rgba($color-black-primary, 0.9);
     height: 0.2rem;
     margin-right: 2.3rem;
     width: 6rem;

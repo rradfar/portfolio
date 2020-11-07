@@ -22,10 +22,6 @@ nav {
   }
 }
 
-.nav-logo-link {
-  //! TBA
-}
-
 .nav-logo-image {
   width: auto;
   height: 100%;
@@ -42,7 +38,7 @@ nav {
   }
 
   &.open {
-    background-color: $color-black-primary;
+    background-color: $color-white-primary;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -63,14 +59,21 @@ nav {
 
 .nav-menu-item {
   list-style: none;
+  margin-bottom: 4rem;
+
+  @media screen and (min-width: $screen-size-lg) {
+    margin-bottom: 0;
+  }
 }
 
 .nav-menu-link {
   position: relative;
   display: inline-block;
   text-decoration: none;
-  color: $color-white-primary;
-  font-family: $font-serif;
+  color: $color-black-primary;
+  font-family: $font-sans-serif;
+  font-size: 2.1rem;
+  line-height: 2.6rem;
   padding: 2rem;
   transition: all 0.3s ease;
 
@@ -108,7 +111,7 @@ nav {
   }
 
   div {
-    background-color: #fff;
+    background-color: $color-black-primary;
     height: 3px;
     margin-bottom: 6px;
     transition: all 0.3s linear;

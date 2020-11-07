@@ -1,27 +1,30 @@
 .hero {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  padding: $padding-screen-sm;
 
   @media screen and (min-width: $screen-size-lg) {
     flex-direction: row;
+    padding: $padding-screen-lg;
   }
 }
 
 .hero-copy {
   order: 2;
-  padding: $padding-screen-sm;
 
   @media screen and (min-width: $screen-size-lg) {
     order: 1;
   }
 
   h1 {
-    font-family: $font-serif;
+    font-family: $font-sans-serif;
     font-weight: $font-weight-bold;
     font-size: 5rem;
     line-height: 5rem;
     letter-spacing: 0.1rem;
+    margin: 3rem 0;
 
     span {
       display: block;
@@ -34,6 +37,10 @@
     font-size: 2rem;
     line-height: 2.6rem;
     margin-top: 3.2rem;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
   }
 }
 
@@ -41,7 +48,6 @@
   order: 1;
   max-width: 100vh;
   max-height: calc(100vh - 6rem);
-  padding: $padding-screen-sm;
   overflow: hidden;
 
   @media screen and (min-width: $screen-size-lg) {
