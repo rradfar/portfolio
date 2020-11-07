@@ -11,7 +11,7 @@
     font-family: $font-sans-serif;
     font-weight: $font-weight-bold;
     font-size: 3.2rem;
-    line-height: 3.8rem;
+    line-height: 4.6rem;
   }
 }
 
@@ -38,6 +38,13 @@
 .portfolio-title {
   text-align: center;
   margin-bottom: 3rem;
+
+  h3 {
+    font-family: $font-sans-serif;
+    font-weight: $font-weight-bold;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+  }
 }
 
 .portfolio-image {
@@ -64,7 +71,7 @@
     font-size: 1.6rem;
     line-height: 2.2rem;
     font-weight: $font-weight-bold;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.2rem;
     transition: all 0.3s ease;
 
     &::before {

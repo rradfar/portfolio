@@ -30,7 +30,7 @@
     font-size: 1.6rem;
     line-height: 2.2rem;
     font-weight: $font-weight-bold;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.2rem;
     transition: all 0.3s ease;
 
     &::before {
@@ -48,7 +48,7 @@
     span {
       transition: 0.3s;
       display: inline-block;
-      margin-left: 5rem;
+      margin-left: 4rem;
     }
 
     &:hover {
