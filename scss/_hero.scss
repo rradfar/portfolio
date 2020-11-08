@@ -2,11 +2,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  text-align: left;
   padding: $padding-screen-sm;
 
   @media screen and (min-width: $screen-size-lg) {
     flex-direction: row;
+    align-items: center;
     padding: $padding-screen-lg;
   }
 }
@@ -16,6 +17,7 @@
 
   @media screen and (min-width: $screen-size-lg) {
     order: 1;
+    padding-right: 2rem;
   }
 
   h1 {
@@ -27,7 +29,11 @@
     margin: 3rem 0;
 
     span {
-      display: block;
+      display: inline-block;
+
+      @media screen and (min-width: $screen-size-lg) {
+        display: block;
+      }
     }
   }
 
@@ -58,5 +64,6 @@
     display: block;
     width: 100%;
     height: 100%;
+    border-radius: 10px;
   }
 }
