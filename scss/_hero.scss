@@ -4,7 +4,7 @@
   justify-content: flex-start;
   text-align: left;
   padding: 0 $padding-screen-sm;
-  max-height: calc(100vh - 6rem);
+  max-height: 100vh;
 
   @media screen and (min-width: $screen-size-lg) {
     flex-direction: row;

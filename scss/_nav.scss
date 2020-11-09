@@ -44,7 +44,7 @@ nav {
     justify-content: flex-start;
     align-items: center;
     padding-top: 6rem;
-    height: 100vh;
+    height: calc(100vh + 6rem);
     width: 100vw;
     z-index: 2;
     position: absolute;
