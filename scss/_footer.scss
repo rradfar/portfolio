@@ -1,4 +1,19 @@
 footer {
-  padding: $padding-screen-sm;
+  position: relative;
   text-align: center;
+  padding: $padding-screen-sm;
+  margin-top: 10rem;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30vh;
+    min-height: 20rem;
+    background: url(../assets/blue-wave-footer.svg) 50% 50% no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
 }

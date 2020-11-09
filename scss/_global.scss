@@ -17,3 +17,25 @@ body {
   color: $color-black-primary;
   font-size: 1.6rem;
 }
+
+.wrapper {
+  display: table-cell;
+  position: relative;
+  overflow: hidden;
+  background: $color-white-primary;
+  z-index: 1;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 55vw;
+    min-width: 68rem;
+    height: 50vw;
+    min-height: 62rem;
+    background: url(../assets/blue-wave-hero.svg) 50% 50% no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+}
