@@ -9,13 +9,27 @@
 }
 
 .about-description {
+  background-color: $color-brand-primary;
+  padding: $padding-screen-lg;
   margin-bottom: 2rem;
+
+  h2 {
+    text-align: center;
+    font-family: $font-sans-serif;
+    font-weight: $font-weight-bolder;
+    font-size: 3.6rem;
+    line-height: 4.4rem;
+
+    @media screen and (min-width: $screen-size-lg) {
+      text-align: left;
+    }
+  }
 
   p {
     font-family: $font-sans-serif;
-    font-weight: $font-weight-normal;
+    font-weight: $font-weight-light;
     font-size: 2rem;
-    line-height: 2.6rem;
+    line-height: 3.1rem;
     margin-top: 2rem;
   }
 }
