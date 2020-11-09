@@ -58,16 +58,57 @@ nav {
 }
 
 .nav-menu-item {
+  position: relative;
   list-style: none;
   margin-bottom: 4rem;
+  transition: all 0.3s ease;
 
   @media screen and (min-width: $screen-size-lg) {
+    padding-left: 4rem;
     margin-bottom: 0;
+  }
+
+  &:first-of-type {
+    &::after {
+      width: 20rem;
+
+      @media screen and (min-width: $screen-size-lg) {
+        width: 8rem;
+        left: 34px;
+      }
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 8px;
+    width: 24rem;
+    height: 6rem;
+    opacity: 0;
+    z-index: -1;
+    overflow: hidden;
+    background-image: url(../assets/yellow-brush.svg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 0.5s ease;
+
+    @media screen and (min-width: $screen-size-lg) {
+      left: 36px;
+      top: 18px;
+      width: 10rem;
+      height: 3.5rem;
+    }
+  }
+
+  &:hover::after {
+    opacity: 1;
   }
 }
 
 .nav-menu-link {
-  position: relative;
   display: inline-block;
   text-decoration: none;
   color: $color-black-primary;
@@ -75,24 +116,6 @@ nav {
   font-size: 2.1rem;
   line-height: 2.6rem;
   padding: 2rem 1rem;
-  transition: all 0.3s ease;
-
-  &::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 0.5rem;
-    background-color: $color-brand-primary;
-    transition: width 0.3s;
-    position: absolute;
-    left: -0.5rem;
-    bottom: 1rem;
-    z-index: -1;
-  }
-
-  &:hover::after {
-    width: calc(100% + 1rem);
-  }
 }
 
 .nav-toggle-btn {
