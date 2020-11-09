@@ -30,9 +30,11 @@
 }
 
 .portfolio-piece {
+  margin-top: 6rem;
   flex-basis: 100%;
 
   @media screen and (min-width: 992px) {
+    margin-top: 3rem;
     flex-basis: 30%;
   }
 }
