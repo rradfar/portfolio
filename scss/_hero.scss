@@ -1,28 +1,39 @@
 .hero {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  text-align: left;
+  align-items: center;
   padding: 0 $padding-screen-sm;
-  max-height: 100vh;
+  height: calc(100vh - 8rem);
 
   @media screen and (min-width: $screen-size-lg) {
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
     padding: 0 $padding-screen-lg;
   }
 }
 
+.hero-image {
+  z-index: -1;
+  svg {
+    filter: brightness(70%);
+    width: 600px;
+    position: absolute;
+    top: 30%;
+    right: 0;
+
+    @media screen and (min-width: $screen-size-lg) {
+      top: 20%;
+      right: 10%;
+    }
+  }
+}
+
 .hero-copy {
-  flex-basis: 100%;
-  order: 1;
-  padding-bottom: 3rem;
+  padding: 6rem 0;
+  animation: transitionIn 1s ease-out;
 
   @media screen and (min-width: $screen-size-lg) {
-    flex-basis: 40%;
-    order: 2;
-    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   h1 {
@@ -57,20 +68,18 @@
   }
 }
 
-.hero-image {
-  order: 2;
-  max-width: 50rem;
-  height: auto;
-  overflow: hidden;
-
-  @media screen and (min-width: $screen-size-lg) {
-    order: 1;
+@keyframes transitionIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
   }
 
-  img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
+  80% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
