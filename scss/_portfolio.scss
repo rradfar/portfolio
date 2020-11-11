@@ -52,7 +52,7 @@
 }
 
 .portfolio-image {
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 1px 1px 2px 2px rgba(255, 255, 255, 0.2);
 
   img {
     border-radius: 2px;
@@ -72,7 +72,7 @@
   a {
     position: relative;
     display: inline-block;
-    color: $color-black-primary;
+    color: $color-white-primary;
     font-size: 1.6rem;
     line-height: 2.2rem;
     font-weight: $font-weight-bold;
@@ -83,7 +83,7 @@
       content: "";
       width: 3rem;
       height: 3rem;
-      border: 0.2rem solid $color-black-primary;
+      border: 0.2rem solid $color-white-primary;
       background: 0 0;
       border-radius: 90%;
       top: -0.8rem;

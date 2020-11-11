@@ -3,6 +3,7 @@ footer {
   text-align: right;
   padding: 0 $padding-screen-sm;
   margin-top: 20rem;
+  color: $color-black-primary;
 
   @media screen and (min-width: $screen-size-lg) {
     padding: 0 $padding-screen-lg;

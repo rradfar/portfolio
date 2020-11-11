@@ -9,14 +9,8 @@
 }
 
 .about-description {
-  background-color: $color-brand-primary;
-  padding: $padding-screen-sm;
-  margin-bottom: 2rem;
+  background-color: $color-black-primary;
   border-radius: 10px;
-
-  @media screen and (min-width: $screen-size-lg) {
-    padding: $padding-screen-lg;
-  }
 
   h2 {
     text-align: center;
