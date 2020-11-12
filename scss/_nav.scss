@@ -84,7 +84,7 @@ nav {
     position: absolute;
     left: -5px;
     top: 8px;
-    width: 24rem;
+    width: 26rem;
     height: 6rem;
     opacity: 0;
     z-index: -1;
@@ -98,9 +98,13 @@ nav {
     @media screen and (min-width: $screen-size-lg) {
       left: 36px;
       top: 18px;
-      width: 10rem;
+      width: 12rem;
       height: 3.5rem;
     }
+  }
+
+  &:hover .nav-menu-link {
+    color: $color-black-primary;
   }
 
   &:hover::after {
