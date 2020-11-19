@@ -129,9 +129,25 @@
     <div class="contact-header">
       <h2>Contact Me</h2>
     </div>
-    <div class="contact-cta">
-      <a href="mailto:ramtinr@gmail.com"><span>Email</span></a>
-    </div>
+
+    <form name="contact-form" method="post" data-netlify="true">
+      <div class="contact-form-name">
+        <label for="name"></label>
+        <input type="text" placeholder="Name" name="name" id="name" required>
+      </div>
+      <div class="contact-form-email">
+        <label for="email"></label>
+        <input type="email" placeholder="E-Mail" name="email" id="email" required>
+      </div>
+      <div class="contact-form-message">
+        <label for="message"></label>
+        <textarea name="message" placeholder="Message" id="message" cols="30" rows="5" required></textarea>
+      </div>
+      <div class="contact-form-submit">
+        <input type="submit" value="Submit" />
+      </div>
+    </form>
+
     <ul class=" contact-socials">
       <li><a href="https://twitter.com/ramtinradfar" target="_blank" rel="noopener noreferrer"><svg
             xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>

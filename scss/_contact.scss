@@ -18,45 +18,78 @@
   }
 }
 
-.contact-cta {
-  text-align: center;
+form {
+  font-family: $font-sans-serif;
+  padding: 4rem;
+  margin: 5rem auto;
+  width: 100%;
 
-  a {
-    position: relative;
-    display: inline-block;
+  @media screen and (min-width: $screen-size-lg) {
+    width: 50%;
+  }
+}
+
+.contact-form-name,
+.contact-form-email {
+  width: 100%;
+
+  @media screen and (min-width: $screen-size-lg) {
+    width: 50%;
+  }
+}
+
+input,
+textarea {
+  background: none;
+  border: none;
+  border-bottom: solid 2px $color-brand-primary;
+  color: $color-white-primary;
+  font-family: $font-sans-serif;
+  font-weight: $font-weight-normal;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  margin: 0 0 1.875em 0;
+  padding: 0 0 0.875em 0;
+  width: 100%;
+  transition: all 0.3s ease-in;
+
+  &::placeholder {
     color: $color-white-primary;
+    font-weight: $font-weight-normal;
     font-size: 1.6rem;
-    line-height: 2.2rem;
-    font-weight: $font-weight-bold;
-    letter-spacing: 0.2rem;
-    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
 
-    &::before {
-      content: "";
-      width: 3rem;
-      height: 3rem;
-      border: 0.2rem solid $color-white-primary;
-      background: 0 0;
-      border-radius: 90%;
-      top: -0.8rem;
-      position: absolute;
-      transition: 0.3s;
-    }
+  &:focus {
+    outline: none;
+    padding: 0 0 0.875em 0;
+  }
+}
 
-    span {
-      transition: 0.3s;
-      display: inline-block;
-      margin-left: 4rem;
-    }
+textarea {
+  line-height: 150%;
+  height: 150px;
+  resize: none;
+  width: 100%;
+}
+
+.contact-form-submit {
+  margin: 0 auto;
+  width: 50%;
+
+  input {
+    border: solid 2px $color-brand-primary;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: $font-weight-boldest;
+    outline: none;
+    padding: 2rem;
+    text-transform: uppercase;
 
     &:hover {
-      &::before {
-        width: calc(100% + 4rem);
-        height: 5.2rem;
-        border-radius: 5rem;
-        top: -1.6rem;
-        border-color: $color-brand-primary;
-      }
+      border-radius: 50px;
     }
   }
 }
